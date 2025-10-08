@@ -22,23 +22,9 @@ The system implements a complete cognitive cycle:
 ```bash
 git clone https://github.com/kevinlmf/LLM-based-Multi-Agent-System
 cd LLM-based-Multi-Agent-System
-
 pip install -r requirements.txt
 export OPENAI_API_KEY='your-api-key-here'
 ```
-
-## Usage
-
-```python
-from core import ReasoningGraph
-
-graph = ReasoningGraph(max_iterations=3)
-result = graph.reason("Your question here")
-
-print(result["final_answer"])
-print(f"Confidence: {result['confidence_score']}")
-```
-
 **Run Examples:**
 ```bash
 python examples/quant_strategy_reasoning.py   # Quant finance strategies
@@ -74,12 +60,47 @@ agent_reasoning_system/
 - **Code Review**: Logic verification, bug detection
 - **Decision Making**: Multi-criteria analysis, scenario planning
 
-## Roadmap
+## Future Work
 
+### Core Features
 - [ ] Memory/RAG integration (persistent learning)
 - [ ] Tool use capability (action execution)
 - [ ] Parallel reasoning branches
 - [ ] Web UI dashboard
+
+### Real-time Data Integration
+
+#### Scenario 1: Financial Market Data
+- [ ] **Stock Markets**: NASDAQ, SSE (Shanghai Stock Exchange), SZSE (Shenzhen Stock Exchange)
+- [ ] **Cryptocurrency**: Real-time prices via Binance API, Coinbase
+- [ ] **Foreign Exchange**: Live forex rates (USD/CNY, EUR/USD, etc.)
+- [ ] **APIs**: Alpha Vantage, Yahoo Finance, yfinance, AKShare, Tushare
+
+#### Scenario 2: Intelligent Decision Analysis
+- [ ] **Weather Data**: Real-time weather, temperature, precipitation
+- [ ] **Traffic Data**: Live traffic conditions, congestion index, public transit status
+- [ ] **News Feeds**: Breaking news aggregation
+- [ ] **APIs**: OpenWeatherMap, QWeather, Amap API, Baidu Maps, NewsAPI, Google News RSS
+- **Use Case**: Smart commute recommendations based on weather, traffic, and current events
+
+#### Scenario 3: Lifestyle Assistant
+- [ ] **Weather & Air Quality**: AQI, PM2.5, UV index
+- [ ] **Transportation**: Multi-modal transit optimization
+- [ ] **E-commerce**: Price tracking and comparison
+- [ ] **APIs**: AirVisual, OpenWeatherMap, Amap API, Taobao Open Platform, JD Union API
+- **Use Case**: Daily decision support with personalized recommendations
+
+#### Scenario 4: Public Sentiment Monitoring
+- [ ] **Social Media**: Twitter/Weibo trending topics, Reddit discussions, Instagram insights, TikTok/Douyin short videos  
+- [ ] **News Sources**: Multi-source news aggregation and media sentiment classification  
+- [ ] **Search Trends**: Google Trends, Baidu Index, Wikipedia Pageviews for emerging topics  
+- [ ] **APIs**: Twitter API v2 (Tweepy), Reddit API (PRAW), Instagram Graph API, Apify Instagram Scraper, Weibo Open Platform, TikTok/Douyin API, NewsAPI.org, Google Trends (Pytrends), Baidu Index  
+- **Use Case**: Real-time hotspot detection and sentiment analysis across social, media, and search ecosystems
+
+
+
+
+
 
 ## Tech Stack
 
@@ -90,3 +111,6 @@ agent_reasoning_system/
 ---
 
 Built for enhanced AI reasoning
+
+
+
