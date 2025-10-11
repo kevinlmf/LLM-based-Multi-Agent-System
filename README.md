@@ -19,10 +19,37 @@ The system implements a complete cognitive cycle:
 
 ## Installation
 
+### Prerequisites
+
+Install Graphviz (required for visualization):
+
+**macOS:**
+```bash
+brew install graphviz
+```
+
+**Ubuntu/Debian:**
+```bash
+sudo apt-get install graphviz graphviz-dev
+```
+
+**Windows:**
+Download and install from [graphviz.org](https://graphviz.org/download/), then add to PATH.
+
+### Setup
+
 ```bash
 git clone https://github.com/kevinlmf/LLM-based-Multi-Agent-System
 cd LLM-based-Multi-Agent-System
+
+# Install Python dependencies
+# macOS/Linux:
+CFLAGS="-I$(brew --prefix graphviz)/include" LDFLAGS="-L$(brew --prefix graphviz)/lib" pip install -r requirements.txt
+
+# Windows (after adding Graphviz to PATH):
 pip install -r requirements.txt
+
+# Set your OpenAI API key
 export OPENAI_API_KEY='your-api-key-here'
 ```
 **Run Examples:**
@@ -111,6 +138,8 @@ agent_reasoning_system/
 ---
 
 Built for enhanced AI reasoning
+
+
 
 
 
